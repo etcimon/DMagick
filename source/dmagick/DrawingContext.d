@@ -993,13 +993,13 @@ class DrawingContext
 
 		version(Windows)
 		{
-			tempPath = getenv("TMP");
+			tempPath = environment["TMP"];
 			if ( tempPath is null )
-				tempPath = getenv("TEMP");
+				tempPath = environment["TEMP"];
 			if ( tempPath is null )
-				tempPath = buildPath(getenv("USERPROFILE"), "AppData/Local/Temp");
+				tempPath = buildPath(environment["USERPROFILE"], "AppData/Local/Temp");
 			if ( tempPath is null || !tempPath.exists )
-				tempPath = buildPath(getenv("WinDir"), "Temp");
+				tempPath = buildPath(environment["WinDir"], "Temp");
 		}
 		else
 		{

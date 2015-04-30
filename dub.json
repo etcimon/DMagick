@@ -55,5 +55,6 @@
 									"lib/CORE_RL_webp_x64.lib",
 									"lib/CORE_RL_zlib_x64.lib"],
 	"libs-windows": ["oleaut32"],
-	"dflags-windows-x86": ["-m32mscoff"]
+	"dflags-windows-x86": ["-m32mscoff"],
+	"lflags": ["/ignore:4099", "/ignore:4003"]
 }
