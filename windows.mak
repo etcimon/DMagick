@@ -1,5 +1,5 @@
 DMD=dmd
-DFLAGS=-O -release
+DFLAGS=-m64 -O -release
 
 LIBNAME=DMagick.lib
 MAGICKCOREDLLNAME=CORE_RL_magick_.dll
@@ -8,110 +8,110 @@ MAGICKCORELIBNAME=MagickCore.lib
 target : $(LIBNAME) $(MAGICKCORELIBNAME)
 
 SOURCE= \
-	dmagick\Array.d \
-	dmagick\CoderInfo.d \
-	dmagick\Color.d \
-	dmagick\ColorCMYK.d \
-	dmagick\ColorGray.d \
-	dmagick\ColorHSL.d \
-	dmagick\ColorRGB.d \
-	dmagick\ColorYUV.d \
-	dmagick\DrawingContext.d \
-	dmagick\Exception.d \
-	dmagick\Geometry.d \
-	dmagick\Image.d \
-	dmagick\ImageView.d \
-	dmagick\Montage.d \
-	dmagick\Options.d \
-	dmagick\Utils.d \
+	source/dmagick/Array.d \
+	source/dmagick/CoderInfo.d \
+	source/dmagick/Color.d \
+	source/dmagick/ColorCMYK.d \
+	source/dmagick/ColorGray.d \
+	source/dmagick/ColorHSL.d \
+	source/dmagick/ColorRGB.d \
+	source/dmagick/ColorYUV.d \
+	source/dmagick/DrawingContext.d \
+	source/dmagick/Exception.d \
+	source/dmagick/Geometry.d \
+	source/dmagick/Image.d \
+	source/dmagick/ImageView.d \
+	source/dmagick/Montage.d \
+	source/dmagick/Options.d \
+	source/dmagick/Utils.d \
 	\
-	dmagick\c\accelerate.d \
-	dmagick\c\animate.d \
-	dmagick\c\annotate.d \
-	dmagick\c\artifact.d \
-	dmagick\c\attribute.d \
-	dmagick\c\blob.d \
-	dmagick\c\cache.d \
-	dmagick\c\cacheView.d \
-	dmagick\c\channel.d \
-	dmagick\c\cipher.d \
-	dmagick\c\client.d \
-	dmagick\c\coder.d \
-	dmagick\c\color.d \
-	dmagick\c\colormap.d \
-	dmagick\c\colorspace.d \
-	dmagick\c\compare.d \
-	dmagick\c\composite.d \
-	dmagick\c\compress.d \
-	dmagick\c\configure.d \
-	dmagick\c\constitute.d \
-	dmagick\c\decorate.d \
-	dmagick\c\deprecate.d \
-	dmagick\c\display.d \
-	dmagick\c\distort.d \
-	dmagick\c\draw.d \
-	dmagick\c\effect.d \
-	dmagick\c\enhance.d \
-	dmagick\c\exception.d \
-	dmagick\c\feature.d \
-	dmagick\c\fourier.d \
-	dmagick\c\fx.d \
-	dmagick\c\gem.d \
-	dmagick\c\geometry.d \
-	dmagick\c\hashmap.d \
-	dmagick\c\histogram.d \
-	dmagick\c\identify.d \
-	dmagick\c\image.d \
-	dmagick\c\imageView.d \
-	dmagick\c\layer.d \
-	dmagick\c\list.d \
-	dmagick\c\locale.d \
-	dmagick\c\log.d \
-	dmagick\c\magic.d \
-	dmagick\c\magick.d \
-	dmagick\c\MagickCore.d \
-	dmagick\c\magickDelegate.d \
-	dmagick\c\magickModule.d \
-	dmagick\c\magickString.d \
-	dmagick\c\magickType.d \
-	dmagick\c\magickVersion.d \
-	dmagick\c\matrix.d \
-	dmagick\c\memory.d \
-	dmagick\c\mime.d \
-	dmagick\c\monitor.d \
-	dmagick\c\montage.d \
-	dmagick\c\morphology.d \
-	dmagick\c\option.d \
-	dmagick\c\paint.d \
-	dmagick\c\pixel.d \
-	dmagick\c\policy.d \
-	dmagick\c\prepress.d \
-	dmagick\c\profile.d \
-	dmagick\c\property.d \
-	dmagick\c\quantize.d \
-	dmagick\c\quantum.d \
-	dmagick\c\random.d \
-	dmagick\c\registry.d \
-	dmagick\c\resample.d \
-	dmagick\c\resize.d \
-	dmagick\c\resource.d \
-	dmagick\c\segment.d \
-	dmagick\c\semaphore.d \
-	dmagick\c\shear.d \
-	dmagick\c\signature.d \
-	dmagick\c\splayTree.d \
-	dmagick\c\statistic.d \
-	dmagick\c\stream.d \
-	dmagick\c\threshold.d \
-	dmagick\c\timer.d \
-	dmagick\c\token.d \
-	dmagick\c\transform.d \
-	dmagick\c\type.d \
-	dmagick\c\utility.d \
-	dmagick\c\xmlTree.d \
-	dmagick\c\xwindow.d \
+	source/dmagick/c\accelerate.d \
+	source/dmagick/c\animate.d \
+	source/dmagick/c\annotate.d \
+	source/dmagick/c\artifact.d \
+	source/dmagick/c\attribute.d \
+	source/dmagick/c\blob.d \
+	source/dmagick/c\cache.d \
+	source/dmagick/c\cacheView.d \
+	source/dmagick/c\channel.d \
+	source/dmagick/c\cipher.d \
+	source/dmagick/c\client.d \
+	source/dmagick/c\coder.d \
+	source/dmagick/c\color.d \
+	source/dmagick/c\colormap.d \
+	source/dmagick/c\colorspace.d \
+	source/dmagick/c\compare.d \
+	source/dmagick/c\composite.d \
+	source/dmagick/c\compress.d \
+	source/dmagick/c\configure.d \
+	source/dmagick/c\constitute.d \
+	source/dmagick/c\decorate.d \
+	source/dmagick/c\deprecate.d \
+	source/dmagick/c\display.d \
+	source/dmagick/c\distort.d \
+	source/dmagick/c\draw.d \
+	source/dmagick/c\effect.d \
+	source/dmagick/c\enhance.d \
+	source/dmagick/c\exception.d \
+	source/dmagick/c\feature.d \
+	source/dmagick/c\fourier.d \
+	source/dmagick/c\fx.d \
+	source/dmagick/c\gem.d \
+	source/dmagick/c\geometry.d \
+	source/dmagick/c\hashmap.d \
+	source/dmagick/c\histogram.d \
+	source/dmagick/c\identify.d \
+	source/dmagick/c\image.d \
+	source/dmagick/c\imageView.d \
+	source/dmagick/c\layer.d \
+	source/dmagick/c\list.d \
+	source/dmagick/c\locale.d \
+	source/dmagick/c\log.d \
+	source/dmagick/c\magic.d \
+	source/dmagick/c\magick.d \
+	source/dmagick/c\MagickCore.d \
+	source/dmagick/c\magickDelegate.d \
+	source/dmagick/c\magickModule.d \
+	source/dmagick/c\magickString.d \
+	source/dmagick/c\magickType.d \
+	source/dmagick/c\magickVersion.d \
+	source/dmagick/c\matrix.d \
+	source/dmagick/c\memory.d \
+	source/dmagick/c\mime.d \
+	source/dmagick/c\monitor.d \
+	source/dmagick/c\montage.d \
+	source/dmagick/c\morphology.d \
+	source/dmagick/c\option.d \
+	source/dmagick/c\paint.d \
+	source/dmagick/c\pixel.d \
+	source/dmagick/c\policy.d \
+	source/dmagick/c\prepress.d \
+	source/dmagick/c\profile.d \
+	source/dmagick/c\property.d \
+	source/dmagick/c\quantize.d \
+	source/dmagick/c\quantum.d \
+	source/dmagick/c\random.d \
+	source/dmagick/c\registry.d \
+	source/dmagick/c\resample.d \
+	source/dmagick/c\resize.d \
+	source/dmagick/c\resource.d \
+	source/dmagick/c\segment.d \
+	source/dmagick/c\semaphore.d \
+	source/dmagick/c\shear.d \
+	source/dmagick/c\signature.d \
+	source/dmagick/c\splayTree.d \
+	source/dmagick/c\statistic.d \
+	source/dmagick/c\stream.d \
+	source/dmagick/c\threshold.d \
+	source/dmagick/c\timer.d \
+	source/dmagick/c\token.d \
+	source/dmagick/c\transform.d \
+	source/dmagick/c\type.d \
+	source/dmagick/c\utility.d \
+	source/dmagick/c\xmlTree.d \
+	source/dmagick/c\xwindow.d \
 	\
-	dmagick\internal\Windows.d \
+	source/dmagick/internal\Windows.d \
 	
 ################## DOCS ####################################
 
@@ -221,310 +221,310 @@ DOCS= \
 html: docs
 docs: $(DOCS)
 
-docs\Array.html: dmagick\Array.d
+docs\Array.html: source/dmagick/Array.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\CoderInfo.html: dmagick\CoderInfo.d
+docs\CoderInfo.html: source/dmagick/CoderInfo.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Color.html: dmagick\Color.d
+docs\Color.html: source/dmagick/Color.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\ColorCMYK.html: dmagick\ColorCMYK.d
+docs\ColorCMYK.html: source/dmagick/ColorCMYK.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\ColorGray.html: dmagick\ColorGray.d
+docs\ColorGray.html: source/dmagick/ColorGray.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\ColorHSL.html: dmagick\ColorHSL.d
+docs\ColorHSL.html: source/dmagick/ColorHSL.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\ColorRGB.html: dmagick\ColorRGB.d
+docs\ColorRGB.html: source/dmagick/ColorRGB.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\ColorYUV.html: dmagick\ColorYUV.d
+docs\ColorYUV.html: source/dmagick/ColorYUV.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\DrawingContext.html: dmagick\DrawingContext.d
+docs\DrawingContext.html: source/dmagick/DrawingContext.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Exception.html: dmagick\Exception.d
+docs\Exception.html: source/dmagick/Exception.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Geometry.html: dmagick\Geometry.d
+docs\Geometry.html: source/dmagick/Geometry.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Image.html: dmagick\Image.d
+docs\Image.html: source/dmagick/Image.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\ImageView.html: dmagick\ImageView.d
+docs\ImageView.html: source/dmagick/ImageView.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Montage.html: dmagick\Montage.d
+docs\Montage.html: source/dmagick/Montage.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Options.html: dmagick\Options.d
+docs\Options.html: source/dmagick/Options.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\Utils.html: dmagick\Utils.d
+docs\Utils.html: source/dmagick/Utils.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc -Df$@
 
-docs\c\accelerate.html: dmagick\c\accelerate.d
+docs\c\accelerate.html: source/dmagick/c\accelerate.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\animate.html: dmagick\c\animate.d
+docs\c\animate.html: source/dmagick/c\animate.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\annotate.html: dmagick\c\annotate.d
+docs\c\annotate.html: source/dmagick/c\annotate.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\artifact.html: dmagick\c\artifact.d
+docs\c\artifact.html: source/dmagick/c\artifact.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\attribute.html: dmagick\c\attribute.d
+docs\c\attribute.html: source/dmagick/c\attribute.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\blob.html: dmagick\c\blob.d
+docs\c\blob.html: source/dmagick/c\blob.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\cache.html: dmagick\c\cache.d
+docs\c\cache.html: source/dmagick/c\cache.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\cacheView.html: dmagick\c\cacheView.d
+docs\c\cacheView.html: source/dmagick/c\cacheView.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\cipher.html: dmagick\c\cipher.d
+docs\c\cipher.html: source/dmagick/c\cipher.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\client.html: dmagick\c\client.d
+docs\c\client.html: source/dmagick/c\client.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\coder.html: dmagick\c\coder.d
+docs\c\coder.html: source/dmagick/c\coder.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\color.html: dmagick\c\color.d
+docs\c\color.html: source/dmagick/c\color.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\colormap.html: dmagick\c\colormap.d
+docs\c\colormap.html: source/dmagick/c\colormap.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\colorspace.html: dmagick\c\colorspace.d
+docs\c\colorspace.html: source/dmagick/c\colorspace.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\compare.html: dmagick\c\compare.d
+docs\c\compare.html: source/dmagick/c\compare.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\composite.html: dmagick\c\composite.d
+docs\c\composite.html: source/dmagick/c\composite.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\compress.html: dmagick\c\compress.d
+docs\c\compress.html: source/dmagick/c\compress.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\configure.html: dmagick\c\configure.d
+docs\c\configure.html: source/dmagick/c\configure.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\constitute.html: dmagick\c\constitute.d
+docs\c\constitute.html: source/dmagick/c\constitute.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\decorate.html: dmagick\c\decorate.d
+docs\c\decorate.html: source/dmagick/c\decorate.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\deprecate.html: dmagick\c\deprecate.d
+docs\c\deprecate.html: source/dmagick/c\deprecate.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\display.html: dmagick\c\display.d
+docs\c\display.html: source/dmagick/c\display.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\distort.html: dmagick\c\distort.d
+docs\c\distort.html: source/dmagick/c\distort.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\draw.html: dmagick\c\draw.d
+docs\c\draw.html: source/dmagick/c\draw.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\effect.html: dmagick\c\effect.d
+docs\c\effect.html: source/dmagick/c\effect.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\enhance.html: dmagick\c\enhance.d
+docs\c\enhance.html: source/dmagick/c\enhance.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\exception.html: dmagick\c\exception.d
+docs\c\exception.html: source/dmagick/c\exception.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\feature.html: dmagick\c\feature.d
+docs\c\feature.html: source/dmagick/c\feature.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\fourier.html: dmagick\c\fourier.d
+docs\c\fourier.html: source/dmagick/c\fourier.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\fx.html: dmagick\c\fx.d
+docs\c\fx.html: source/dmagick/c\fx.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\gem.html: dmagick\c\gem.d
+docs\c\gem.html: source/dmagick/c\gem.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\geometry.html: dmagick\c\geometry.d
+docs\c\geometry.html: source/dmagick/c\geometry.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\hashmap.html: dmagick\c\hashmap.d
+docs\c\hashmap.html: source/dmagick/c\hashmap.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\histogram.html: dmagick\c\histogram.d
+docs\c\histogram.html: source/dmagick/c\histogram.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\identify.html: dmagick\c\identify.d
+docs\c\identify.html: source/dmagick/c\identify.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\image.html: dmagick\c\image.d
+docs\c\image.html: source/dmagick/c\image.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\imageView.html: dmagick\c\imageView.d
+docs\c\imageView.html: source/dmagick/c\imageView.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\layer.html: dmagick\c\layer.d
+docs\c\layer.html: source/dmagick/c\layer.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\list.html: dmagick\c\list.d
+docs\c\list.html: source/dmagick/c\list.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\locale.html: dmagick\c\locale.d
+docs\c\locale.html: source/dmagick/c\locale.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\log.html: dmagick\c\log.d
+docs\c\log.html: source/dmagick/c\log.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magic.html: dmagick\c\magic.d
+docs\c\magic.html: source/dmagick/c\magic.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magick.html: dmagick\c\magick.d
+docs\c\magick.html: source/dmagick/c\magick.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\MagickCore.html: dmagick\c\MagickCore.d
+docs\c\MagickCore.html: source/dmagick/c\MagickCore.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magickDelegate.html: dmagick\c\magickDelegate.d
+docs\c\magickDelegate.html: source/dmagick/c\magickDelegate.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magickModule.html: dmagick\c\magickModule.d
+docs\c\magickModule.html: source/dmagick/c\magickModule.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magickString.html: dmagick\c\magickString.d
+docs\c\magickString.html: source/dmagick/c\magickString.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magickType.html: dmagick\c\magickType.d
+docs\c\magickType.html: source/dmagick/c\magickType.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\magickVersion.html: dmagick\c\magickVersion.d
+docs\c\magickVersion.html: source/dmagick/c\magickVersion.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\matrix.html: dmagick\c\matrix.d
+docs\c\matrix.html: source/dmagick/c\matrix.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\memory.html: dmagick\c\memory.d
+docs\c\memory.html: source/dmagick/c\memory.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\mime.html: dmagick\c\mime.d
+docs\c\mime.html: source/dmagick/c\mime.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\monitor.html: dmagick\c\monitor.d
+docs\c\monitor.html: source/dmagick/c\monitor.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\montage.html: dmagick\c\montage.d
+docs\c\montage.html: source/dmagick/c\montage.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\morphology.html: dmagick\c\morphology.d
+docs\c\morphology.html: source/dmagick/c\morphology.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\option.html: dmagick\c\option.d
+docs\c\option.html: source/dmagick/c\option.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\paint.html: dmagick\c\paint.d
+docs\c\paint.html: source/dmagick/c\paint.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\pixel.html: dmagick\c\pixel.d
+docs\c\pixel.html: source/dmagick/c\pixel.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\policy.html: dmagick\c\policy.d
+docs\c\policy.html: source/dmagick/c\policy.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\prepress.html: dmagick\c\prepress.d
+docs\c\prepress.html: source/dmagick/c\prepress.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\profile.html: dmagick\c\profile.d
+docs\c\profile.html: source/dmagick/c\profile.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\property.html: dmagick\c\property.d
+docs\c\property.html: source/dmagick/c\property.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\quantize.html: dmagick\c\quantize.d
+docs\c\quantize.html: source/dmagick/c\quantize.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\quantum.html: dmagick\c\quantum.d
+docs\c\quantum.html: source/dmagick/c\quantum.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\random.html: dmagick\c\random.d
+docs\c\random.html: source/dmagick/c\random.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\registry.html: dmagick\c\registry.d
+docs\c\registry.html: source/dmagick/c\registry.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\resample.html: dmagick\c\resample.d
+docs\c\resample.html: source/dmagick/c\resample.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\resize.html: dmagick\c\resize.d
+docs\c\resize.html: source/dmagick/c\resize.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\resource.html: dmagick\c\resource.d
+docs\c\resource.html: source/dmagick/c\resource.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\segment.html: dmagick\c\segment.d
+docs\c\segment.html: source/dmagick/c\segment.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\semaphore.html: dmagick\c\semaphore.d
+docs\c\semaphore.html: source/dmagick/c\semaphore.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\shear.html: dmagick\c\shear.d
+docs\c\shear.html: source/dmagick/c\shear.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\signature.html: dmagick\c\signature.d
+docs\c\signature.html: source/dmagick/c\signature.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\splayTree.html: dmagick\c\splayTree.d
+docs\c\splayTree.html: source/dmagick/c\splayTree.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\statistic.html: dmagick\c\statistic.d
+docs\c\statistic.html: source/dmagick/c\statistic.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\stream.html: dmagick\c\stream.d
+docs\c\stream.html: source/dmagick/c\stream.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\threshold.html: dmagick\c\threshold.d
+docs\c\threshold.html: source/dmagick/c\threshold.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\timer.html: dmagick\c\timer.d
+docs\c\timer.html: source/dmagick/c\timer.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\token.html: dmagick\c\token.d
+docs\c\token.html: source/dmagick/c\token.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\transform.html: dmagick\c\transform.d
+docs\c\transform.html: source/dmagick/c\transform.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\type.html: dmagick\c\type.d
+docs\c\type.html: source/dmagick/c\type.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\utility.html: dmagick\c\utility.d
+docs\c\utility.html: source/dmagick/c\utility.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\xmlTree.html: dmagick\c\xmlTree.d
+docs\c\xmlTree.html: source/dmagick/c\xmlTree.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
-docs\c\xwindow.html: dmagick\c\xwindow.d
+docs\c\xwindow.html: source/dmagick/c\xwindow.d
 	$(DMD) $** $(DFLAGS) -c -o- -I. docs\dmagick.ddoc docs\dmagick.c.ddoc -Df$@
 
 ################### Library generation #########################
 
 $(LIBNAME): $(SOURCE)
-	$(DMD) -lib -of$(LIBNAME) $(DFLAGS) $(SOURCE)
+	$(DMD) -m64 -lib -of$(LIBNAME) $(DFLAGS) $(SOURCE)
 
 unittest: stubmain.d $(SOURCE) $(MAGICKCORELIBNAME)
 	$(DMD) -of$@.exe -unittest $(DFLAGS) $**
